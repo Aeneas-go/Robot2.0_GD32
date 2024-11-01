@@ -1,0 +1,130 @@
+T616C 007:380.956   SEGGER J-Link V8.10c Log File
+T616C 007:381.061   DLL Compiled: Oct 16 2024 16:14:07
+T616C 007:381.074   Logging started @ 2024-10-22 08:14
+T616C 007:381.086   Process: D:\Keil_v5\UV4\UV4.exe
+T616C 007:381.097 - 11.777ms
+T616C 007:381.113 JLINK_SetWarnOutHandler(...)
+T616C 007:381.124 - 0.011ms
+T616C 007:381.137 JLINK_OpenEx(...)
+T616C 007:384.190   Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+T616C 007:385.053   Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+T616C 007:387.692   Hardware: V7.00
+T616C 007:387.713   S/N: 20171112
+T616C 007:387.728   OEM: SEGGER
+T616C 007:387.744   Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull
+T616C 007:388.168   Bootloader: (FW returned invalid version)
+T616C 007:389.433   TELNET listener socket opened on port 19021
+T616C 007:394.572   Device "CORTEX-M23" selected.
+T616C 007:396.078   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T616C 007:396.272   WEBSRV Webserver running on local port 19080
+T616C 007:396.401   Looking for J-Link GUI Server exe at: D:\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T616C 007:396.425   Looking for J-Link GUI Server exe at: D:\Program Files\SEGGER\JLink_V810c\JLinkGUIServer.exe
+T616C 007:396.435   Forking J-Link GUI Server: D:\Program Files\SEGGER\JLink_V810c\JLinkGUIServer.exe
+T616C 007:601.404   J-Link GUI Server info: "J-Link GUI server V8.10c "
+T616C 007:603.233 - 222.096ms returns "O.K."
+T616C 007:603.258 JLINK_GetEmuCaps()
+T616C 007:603.265 - 0.007ms returns 0x88EA5833
+T616C 007:603.275 JLINK_TIF_GetAvailable(...)
+T616C 007:603.629 - 0.354ms
+T616C 007:603.641 JLINK_SetErrorOutHandler(...)
+T616C 007:603.648 - 0.006ms
+T616C 007:603.663 JLINK_ExecCommand("ProjectFile = "E:\Project\GD32E230C8T6_KEIL_Project\GD32E230C8T6\Project\JLinkSettings.ini"", ...). 
+T616C 007:604.406   Device "CORTEX-M23" selected.
+T616C 007:604.726 - 1.064ms returns 0x00
+T616C 007:604.744 JLINK_ExecCommand("Device = GD32E230C8", ...). 
+T616C 007:604.797   Flash bank @ 0x1FFFF800: SFL: Parsing sectorization info from ELF file
+T616C 007:604.806     FlashDevice.SectorInfo[0]: .SectorSize = 0x00000010, .SectorStartAddr = 0x00000000
+T616C 007:604.901   Device "GD32E230C8" selected.
+T616C 007:605.346 - 0.592ms returns 0x00
+T616C 007:605.369 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T616C 007:606.237   ERROR: Unknown command
+T616C 007:606.257 - 0.023ms returns 0x01
+T616C 007:606.268 JLINK_GetHardwareVersion()
+T616C 007:606.277 - 0.008ms returns 70000
+T616C 007:606.286 JLINK_GetDLLVersion()
+T616C 007:606.295 - 0.008ms returns 81003
+T616C 007:606.305 JLINK_GetOEMString(...)
+T616C 007:606.315 JLINK_GetFirmwareString(...)
+T616C 007:606.323 - 0.008ms
+T616C 007:606.336 JLINK_GetDLLVersion()
+T616C 007:606.345 - 0.008ms returns 81003
+T616C 007:606.354 JLINK_GetCompileDateTime()
+T616C 007:606.362 - 0.008ms
+T616C 007:606.373 JLINK_GetFirmwareString(...)
+T616C 007:606.381 - 0.008ms
+T616C 007:606.390 JLINK_GetHardwareVersion()
+T616C 007:606.399 - 0.008ms returns 70000
+T616C 007:606.408 JLINK_GetSN()
+T616C 007:606.417 - 0.008ms returns 20171112
+T616C 007:606.426 JLINK_GetOEMString(...)
+T616C 007:606.438 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T616C 007:607.221 - 0.782ms returns 0x00
+T616C 007:607.235 JLINK_HasError()
+T616C 007:607.243 JLINK_SetSpeed(5000)
+T616C 007:607.388 - 0.144ms
+T616C 007:607.630 JLINK_HasError()
+T616C 007:607.642 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T616C 007:607.649 - 0.007ms returns JLINKARM_RESET_TYPE_NORMAL
+T616C 007:607.657 JLINK_Reset()
+T616C 007:607.914   InitTarget() start
+T616C 007:607.933    J-Link Script File: Executing InitTarget()
+T616C 007:608.586   Error: Failed to initialized DAP.
+T616C 007:608.599   InitTarget() end - Took 665us
+T616C 007:608.620   Connect fallback: Reset via Reset pin & Connect.
+T616C 007:666.244   InitTarget() start
+T616C 007:666.296    J-Link Script File: Executing InitTarget()
+T616C 007:667.088   Error: Failed to initialized DAP.
+T616C 007:667.110   InitTarget() end - Took 813us
+T616C 007:667.126 - 59.469ms
+T616C 007:667.147 JLINK_GetId()
+T616C 007:667.438   InitTarget() start
+T616C 007:667.456    J-Link Script File: Executing InitTarget()
+T616C 007:669.041   Error: Failed to initialized DAP.
+T616C 007:669.070   InitTarget() end - Took 1.61ms
+T616C 007:669.089   Connect fallback: Reset via Reset pin & Connect.
+T616C 007:726.469   InitTarget() start
+T616C 007:726.536    J-Link Script File: Executing InitTarget()
+T616C 007:727.490   Error: Failed to initialized DAP.
+T616C 007:727.529   InitTarget() end - Took 986us
+T616C 007:727.549 - 60.400ms returns 0x00000000
+T616C 007:727.575 JLINK_GetId()
+T616C 007:728.029   InitTarget() start
+T616C 007:728.056    J-Link Script File: Executing InitTarget()
+T616C 007:729.231   Error: Failed to initialized DAP.
+T616C 007:729.272   InitTarget() end - Took 1.21ms
+T616C 007:729.291   Connect fallback: Reset via Reset pin & Connect.
+T616C 007:786.585   InitTarget() start
+T616C 007:786.646    J-Link Script File: Executing InitTarget()
+T616C 007:787.510   Error: Failed to initialized DAP.
+T616C 007:787.572   InitTarget() end - Took 922us
+T616C 007:787.602 - 60.020ms returns 0x00000000
+T616C 007:789.610 JLINK_GetFirmwareString(...)
+T616C 007:789.633 - 0.022ms
+T616C 014:750.763 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:751.501 - 0.736ms returns 0x00
+T616C 014:751.536 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:752.050 - 0.514ms returns 0x00
+T616C 014:752.061 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:752.426 - 0.365ms returns 0x00
+T616C 014:752.435 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:752.752 - 0.317ms returns 0x00
+T616C 014:752.762 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:753.106 - 0.344ms returns 0x00
+T616C 014:753.114 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:753.448 - 0.334ms returns 0x00
+T616C 014:753.458 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:753.798 - 0.341ms returns 0x00
+T616C 014:753.806 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:754.090 - 0.283ms returns 0x00
+T616C 014:754.098 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:754.432 - 0.335ms returns 0x00
+T616C 014:754.563 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T616C 014:755.051 - 0.487ms returns 0x00
+T4364 016:718.141 Looking for J-Link GUI Server exe at: D:\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T4364 016:718.240 Looking for J-Link GUI Server exe at: D:\Program Files\SEGGER\JLink_V810c\JLinkGUIServer.exe
+T4364 016:718.267 Forking J-Link GUI Server: D:\Program Files\SEGGER\JLink_V810c\JLinkGUIServer.exe
+T4364 016:919.076 J-Link GUI Server info: "J-Link GUI server V8.10c "
+T616C 228:371.680 JLINK_Close()
+T616C 228:375.552 - 3.873ms
+T616C 228:375.600   
+T616C 228:375.600   Closed
