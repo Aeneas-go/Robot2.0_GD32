@@ -60,8 +60,8 @@
 #define MPU_ACCEL_ZOUTH_REG                0X3F        //加速度值,Z轴高8位寄存器
 #define MPU_ACCEL_ZOUTL_REG                0X40        //加速度值,Z轴低8位寄存器
 
-#define MPU_TEMP_OUTH_REG                0X41        //温度值高八位寄存器
-#define MPU_TEMP_OUTL_REG                0X42        //温度值低8位寄存器
+#define MPU_TEMP_OUTH_REG                  0X41        //温度值高八位寄存器
+#define MPU_TEMP_OUTL_REG                  0X42        //温度值低8位寄存器
 
 #define MPU_GYRO_XOUTH_REG                0X43        //陀螺仪值,X轴高8位寄存器
 #define MPU_GYRO_XOUTL_REG                0X44        //陀螺仪值,X轴低8位寄存器

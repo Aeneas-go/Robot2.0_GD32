@@ -28,12 +28,23 @@
 #include "Action.h"
 #include "OLED.h"
 #include "bsp_ultrasonic.h"
+#include "bsp_mpu6050.h"
+#include "inv_mpu.h"
 
+void Buzzing_Init(void)
+{
+	rcu_periph_clock_enable(RCU_GPIOA);
+	gpio_mode_set(GPIOA,GPIO_MODE_OUTPUT,GPIO_PUPD_NONE,GPIO_PIN_8);
+	gpio_output_options_set(GPIOA,GPIO_OTYPE_PP,GPIO_OSPEED_50MHZ,GPIO_PIN_5);
+	gpio_bit_reset(GPIOA,GPIO_PIN_8);
+}
+void Buzzing(void){gpio_bit_set(GPIOA,GPIO_PIN_8);delay_ms(10);gpio_bit_reset(GPIOA,GPIO_PIN_8);}
 extern unsigned char Bluetooth_ConnectFlag; //蓝牙连接状态 =0没有手机连接                =1有手机连接
 extern char BLERX_BUFF[BLERX_LEN_MAX];
 extern unsigned char BLERX_FLAG;
 uint8_t lengthflag=0;
 static uint8_t actnumber=0;
+float pitch,roll,yaw;
 enum SelectAction{
 	Stop=0,
 	Forward=1,
@@ -52,6 +63,7 @@ enum SelectAction{
 	test=14
 	
 }SelectAction;
+
 enum CtrlMode
 {
 	BlueTooch=0,
@@ -99,11 +111,15 @@ void HexapodRobot_Init(InitFunc Robot_Positure_Init)
 	{
 		Robot_Posture_Begin[i]=Robot_Low_Start[i];
 	}
+	
 	OLED_Init();
 	systick_config();
+	Buzzing_Init();
 	usart_gpio_config(9600);
+	MPU6050_Init();
 	Ultrasonic_Init();
 	Robot_Positure_Init();
+	
 }
 /**
   * @brief  框架入口函数
@@ -117,7 +133,7 @@ void FrameEntry()
 	debug("Frame");
 	while(1)
 	{
-		
+		//CtrlEntry(BalanceMode);
 		CtrlEntry(BluetoochMode);
 		//test();
 	}
@@ -155,11 +171,9 @@ void BluetoochMode(void)
 	{
 		Bluetooth_Mode();
 		//if(lengthflag!=1)
-			ActionCallBack(actnumber);
-        OLED_ShowNum(3,1,actnumber,4);     
+		ActionCallBack(actnumber);
 		if( BLERX_FLAG == 1 )//接收到蓝牙数据    
 		{
-                    
 			BLERX_FLAG = 0;
 					//显示蓝牙发送过来的数据
 					//BLERX_BUFF为数据包
@@ -169,6 +183,28 @@ void BluetoochMode(void)
 			actnumber=atoi(BLERX_BUFF);		
 			Clear_BLERX_BUFF();//清除接收缓存		
          }
+		
+	}
+}
+void BalanceMode(void)
+{
+	pitch=0;roll=0;yaw=0;
+	while( mpu_dmp_init() )
+	{
+		OLED_ShowString(2,1,"dmp error");
+		delay_1ms(200);
+	}
+	while(1)
+	{
+		if(mpu_dmp_get_data(&pitch,&roll,&yaw) == 0)
+		{
+			OLED_ShowString(1,1,"pitch");
+			OLED_ShowString(2,1,"roll");
+			OLED_ShowString(3,1,"yaw");
+			OLED_ShowNum(1,6,pitch,5);
+			OLED_ShowNum(2,6,roll,5);
+			OLED_ShowNum(3,6,yaw,5);
+		}      
 	}
 }
 void WIFIMode(void)
@@ -185,4 +221,6 @@ void SwitchGait()
 	
 	return;
 }
+
+
 

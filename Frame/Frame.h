@@ -19,6 +19,7 @@
 #ifndef __FRAME_H__
 #define __FRAME_H__
 #include <stdint.h>
+
 typedef void (*CallBackFunc)(void);
 typedef void (*InitFunc)(void);
 typedef void (*Action)(void);
@@ -27,7 +28,7 @@ typedef void (*Action)(void);
 void FrameEntry(void);
 void CtrlEntry(CallBackFunc CtrlMode);
 void BluetoochMode(void);
-
+void BalanceMode(void);
 
 
 

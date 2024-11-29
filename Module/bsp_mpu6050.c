@@ -50,7 +50,7 @@ void MPU6050_GPIO_Init(void)
  * 作       者：LC
  * 备       注：无
 ******************************************************************/
-void IIC_Start(void)
+static void IIC_Start(void)
 {
         SDA_OUT();
         SCL(1); 
@@ -71,7 +71,7 @@ void IIC_Start(void)
  * 作       者：LC
  * 备       注：无
 ******************************************************************/
-void IIC_Stop(void)
+static void IIC_Stop(void)
 {
         SDA_OUT();
         SCL(0);
@@ -92,7 +92,7 @@ void IIC_Stop(void)
  * 作       者：LC
  * 备       注：无
 ******************************************************************/
-void IIC_Send_Ack(unsigned char ack)
+static void IIC_Send_Ack(unsigned char ack)
 {
         SDA_OUT();
         SCL(0);
@@ -115,7 +115,7 @@ void IIC_Send_Ack(unsigned char ack)
  * 作       者：LC
  * 备       注：无
 ******************************************************************/
-unsigned char I2C_WaitAck(void)
+static unsigned char I2C_WaitAck(void)
 {
         
         char ack = 0;
@@ -152,7 +152,7 @@ unsigned char I2C_WaitAck(void)
  * 作       者：LC
  * 备       注：无
 ******************************************************************/
-void Send_Byte(uint8_t dat)
+static void Send_Byte(uint8_t dat)
 {
         int i = 0;
         SDA_OUT();
@@ -171,14 +171,17 @@ void Send_Byte(uint8_t dat)
 }
 
 /******************************************************************
+
  * 函 数 名 称：Read_Byte
  * 函 数 说 明：IIC读时序
  * 函 数 形 参：无
  * 函 数 返 回：读到的数据
  * 作       者：LC
  * 备       注：无
+
 ******************************************************************/
-unsigned char Read_Byte(void)
+
+static unsigned char Read_Byte(void)
 {
         unsigned char i,receive=0;
         SDA_IN();//SDA设置为输入

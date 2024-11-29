@@ -135,7 +135,6 @@ void Move_Logic(Dire* dire)
 	_Move_Robot(RightJoint_Module,Robot_Posture,dire->RightJointDOWNAngle,3,SPEED);//右边joint放下
 	delay_ms(SPEED);
 	_Move_Robot(LeftLeg_Module,Robot_Posture,Universal_Param,3,SPEED);//左边leg放下
-	
 	_Move_Robot(LeftJoint_Module,Robot_Posture,dire->LeftJointDOWNAngle,3,SPEED);//左边joint放下
 	_Move_Robot(RightLeg_Module,Robot_Posture,RightLeg_UP_Param,3,SPEED);//右边leg抬起
 	delay_ms(SPEED+1);
@@ -249,6 +248,11 @@ void Move_Rotation(void)
 	}
 	delay_ms(200);
 }
+/**
+  * @brief  set posture high
+  * @param  void
+  * @retval  none
+  */
 void Set_Posture_High(void){
 	for(uint8_t i=1;i<19;i++)
 	{
@@ -259,6 +263,11 @@ void Set_Posture_High(void){
 	Move_Stop();
 	delay_ms(SPEED);
 }
+/**
+  * @brief  set posture midium
+  * @param  void
+  * @retval  none
+  */
 void Set_Posture_Midium(void){
 	for(uint8_t i=1;i<19;i++)
 	{
@@ -269,14 +278,21 @@ void Set_Posture_Midium(void){
 	Move_Stop();
 	delay_ms(SPEED);
 }
+/**
+  * @brief  set posture low 
+  * @param  none
+  * @retval  none
+  */
 void Set_Posture_Low(void){
 	for(uint8_t i=0;i<18;i++)
 	{Robot_Posture_Begin[i]=Robot_Low_Start[i];}
 	Move_Stop();delay_ms(SPEED);
 }		
+
 void Set_Speed_High(void){SPEED=SPEED_HIGH;}
 void Set_Speed_Midium(void){SPEED=SPEED_MIDIUM;}
 void Set_Speed_Low(void){SPEED=SPEED_LOW;}
+
 /**
   * @brief  move stop
   * @param  void

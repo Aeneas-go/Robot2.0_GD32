@@ -604,6 +604,16 @@
               <FileType>5</FileType>
               <FilePath>..\Robot\RobotServoController.h</FilePath>
             </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Robot\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Robot\pid.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -628,6 +638,26 @@
               <FileName>bsp_mpu6050.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Module\bsp_mpu6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_mq2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module\bsp_mq2.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_mq2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Module\bsp_mq2.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pca9685.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module\bsp_pca9685.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pca9685.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Module\bsp_pca9685.h</FilePath>
             </File>
           </Files>
         </Group>

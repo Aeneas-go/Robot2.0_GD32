@@ -16,8 +16,8 @@ typedef struct Stack
 	uint16_t(*pop)(struct Stack*);
 	uint16_t(*peek)(struct Stack*);
 	
-}Sta;
-
+}stack;
+typedef struct 
 uint16_t HexadecimalToBinary(uint16_t hexa);
 uint16_t BinaryToDecimalism();
 

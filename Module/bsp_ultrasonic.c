@@ -181,7 +181,7 @@ float Hcsr04GetLength(void)
         float t = 0;
         float sum = 0;
         unsigned int  i = 0;
-		while(i <= 2){
+		while(i != 5){
                         gpio_bit_write(PORT_TRIG, GPIO_TRIG, SET);//trig拉高信号，发出高电平
 
                 delay_1us(20);//持续时间超过10us
@@ -204,7 +204,7 @@ float Hcsr04GetLength(void)
                 length = (float)t/58;//单位时cm
                 sum += length;                
         }
-        length = sum/2;//五次平均值
+        length = sum/5;//五次平均值
         distance = length;
 		
 		//printf("%f\r\n",length);

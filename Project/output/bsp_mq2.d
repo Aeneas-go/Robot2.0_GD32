@@ -1,8 +1,7 @@
-./output/frame.o: ..\Frame\Frame.c ..\Frame\Frame.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\string.h ..\Hardware\usart\bsp_usart.h \
+./output/bsp_mq2.o: ..\Module\bsp_mq2.c ..\Module\bsp_mq2.h \
   ..\Firmware\CMSIS\GD\GD32E23x\Include\gd32e23x.h \
   D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm23.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
   D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h \
   D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h \
   D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h \
@@ -27,9 +26,4 @@
   ..\Firmware\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h \
   ..\Firmware\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h \
   ..\Firmware\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h \
-  ..\User\systick.h ..\Hardware\bluetooth.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stdio.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stdlib.h \
-  ..\Robot\RobotServoController.h ..\Action\Action.h ..\Action\common.h \
-  ..\Hardware\OLED.h ..\Module\bsp_ultrasonic.h ..\Module\bsp_mpu6050.h \
-  ..\Module\EMPL\inv_mpu.h
+  ..\User\systick.h
